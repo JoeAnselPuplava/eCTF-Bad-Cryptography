@@ -2,6 +2,8 @@
     "files.associations": {
         "stddef.h": "c",
         "stdbool.h": "c",
-        "decoder.h": "c"
+        "decoder.h": "c",
+        "hash.h": "c",
+        "stdint.h": "c"
     }
 }

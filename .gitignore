@@ -1,2 +1,8 @@
 tools.c
-secrets
+secrets*
+crypto.*
+gen_header.py
+wolfssl*/
+solution*
+global*
+Might*/

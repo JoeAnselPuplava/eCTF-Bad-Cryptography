@@ -44,9 +44,10 @@ So if you were to try to compare the Hash to the Flag file currently, it should 
     Flag: FAILED
     sha256sum: WARNING: 1 computed checksum did NOT match
 
-Now do the line below:
+Now do the line below and try to compare the hash again:
 
     echo -n "flag{Harmadillo}" > Flag
+
 It should be returning:
 
     Flag: OK
@@ -91,7 +92,7 @@ decoder.c and decoder.h are provided just so that you can see how the decoder.o 
 
 #### **decoder.o**
 
-**WARNING**: You can probably just object dump this file to get information BUT I HIGHLY RECOMMEND NOT TO DO IT. The point of this lab is to think of cryptographic vulnerabilities and exploit them, not my inability to encrypt object files 😢.
+**WARNING**: You can probably just object dump this file to get information but I highly recommend **NOT** to do it. The point of this lab is to think of cryptographic vulnerabilities and exploit them, not my inability to encrypt object files 😢.
 
 decoder.o simulates a working decoder that has a valid subscription to channel_1. To use decoder.o you have to give it a file with encrypted frames that are separated by new lines:
 
