@@ -4,22 +4,23 @@
 
 This is a lab that shows bad implementations of cryptographic protocols used in the 2025 eCTF. 
 The topic of the 2025 eCTF was creating an encoder and decoder for a satellite system.
-So this lab is about 
+**DISCLAIMER:** These are real implementations from real schools!
 
 **IMPORTANT**
-So you are given encrypted frames from channel 1 and 2.
+
+You are given encrypted frames from channel 1 and 2 (or channel 10008).
 However, the provided decoder only has a valid subscription for channel 1!
-To get the flag, you must be able to decrypt the channel 2 frames.
+To get the flag, you must be able to decrypt other channel's frames.
 Break every level's designs by exploiting their misuse of cryptographic protocols!
 
 
-*Notes to self*
+<!-- *Notes to self*
 NEED TO CREATE SLIDESHOW FOR EXPLAINING EVERYTHING
 I think the lab should be an hour long? Actually let's do 1.25 hours
 So presentation should take 10 minutes and then every level will take 10 minutes 
     (50 minutes)
 Then presentation explaining how to crack every level and get feedback 
-    (15 minutes)
+    (15 minutes) -->
 
 ## Flag Verfication
 
