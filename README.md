@@ -14,26 +14,11 @@ To get the flag, you must be able to decrypt other channel's frames.
 Break every level's designs by exploiting their misuse of cryptographic protocols!
 
 
-<!-- *Notes to self*
-NEED TO CREATE SLIDESHOW FOR EXPLAINING EVERYTHING
-I think the lab should be an hour long? Actually let's do 1.25 hours
-So presentation should take 10 minutes and then every level will take 10 minutes 
-    (50 minutes)
-Then presentation explaining how to crack every level and get feedback 
-    (15 minutes) -->
-
 ## Flag Verfication
 
 Windows
 
-* https://www.shellhacks.com/windows-md5-sha256-checksum-built-in-utility/
-* Maybe that?
-
-        echo -n "foobar" | sha256sum
-
-* Maybe this?
-    
-        certUtil -hashfile C:\file.img SHA256
+Open Git Bash and use the Mac / Linux command!
 
 Mac / Linux
 
@@ -119,23 +104,35 @@ Example:
 
 decoder.c and decoder.h are provided just so that you can see how the decoder.o is implemented since we don't want security by obscurity! Also, to make these files work without a board, I've taken some creative liberties to adjust them BUT the changes made have no impact on the initial design of the encryption algorithm. 
 
-#### **decoder.o**
+#### **decoder.o** and **exe**
 
 **WARNING**: You can probably just object dump this file to get information but I highly recommend **NOT** to do it. The point of this lab is to think of cryptographic vulnerabilities and exploit them.
 
-decoder.o simulates a working decoder that has a valid subscription to channel_1. To use decoder.o you have to give it a file with encrypted frames that are separated by new lines:
+decoder.o/exe simulates a working decoder that has a valid subscription to channel_1. To use decoder.o/exe you have to give it a file with encrypted frames that are separated by new lines:
 
 In case you have to make it an executable:
 
-    chmod +x decoder.o
+    chmod +x decoder.o/exe
 
-To use decoder.o:
+* Mac/Linux 
 
-    ./decoder.o file_with_encrypted_frames
+    To use decoder.o:
 
-Example:
+        ./decoder.o file_with_encrypted_frames
 
-    ./decoder.o CHANNEL_1
+    Example:
+
+        ./decoder.o CHANNEL_1
+
+* Windows 
+
+    To use decoder.exe:
+
+        .\decoder.exe file_with_encrypted_frames
+
+    Example:
+
+        .\decoder.exe CHANNEL_1
 
 ## Level 1
 
